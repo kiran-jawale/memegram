@@ -1,9 +1,8 @@
-import Reacr from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
 import App from "./App.jsx";
 import "./index.css";
 import { Home, Feed, Profile, Board } from "./pages";
-import { Layout } from "./pages/layout";
+
 import {
   Route,
   createBrowserRouter,
@@ -15,7 +14,7 @@ import { PostProvider, usePostContext } from "./contexts/postContext.js";
 
 const navRouter = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path={navObj.profile.path} element={<Profile />} />
       <Route path={navObj.feed.path} element={<Feed />} />
