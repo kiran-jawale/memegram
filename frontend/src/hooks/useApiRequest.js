@@ -11,7 +11,7 @@ export default function useApiRequest(method, url, data = null) {
                 const options = {
                     method,
                     headers: {
-                        'Content-Typs': 'application/json'
+                        'Content-Type': 'application/json'
                     },
                     body: data ? JSON.stringify(data) : null,
                 }
